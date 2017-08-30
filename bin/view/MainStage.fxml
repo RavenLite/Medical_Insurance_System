@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="850.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainStageController">
+   <children>
+      <AnchorPane prefHeight="120.0" prefWidth="1300.0" style="-fx-background-color: #CAFF70;" AnchorPane.bottomAnchor="775.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="status" layoutX="973.0" layoutY="22.0" text="下午好" textFill="#d00b0b">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="name" layoutX="1059.0" layoutY="15.0" text="用户名">
+               <font>
+                  <Font size="35.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="time" layoutX="1182.0" layoutY="28.0" text="时间" />
+         </children></AnchorPane>
+      <AnchorPane layoutY="75.0" prefHeight="750.0" prefWidth="219.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1081.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <TitledPane layoutX="10.0" layoutY="6.0" prefHeight="200.0" prefWidth="200.0" text="菜单" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <AnchorPane prefHeight="685.0" prefWidth="219.0" style="-fx-background-color: #FFFACD;">
+                     <children>
+                        <VBox layoutX="24.0" layoutY="44.0" prefHeight="330.0" prefWidth="224.0" AnchorPane.bottomAnchor="352.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="32.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#charge" prefHeight="60.0" prefWidth="235.0" text="中心报销" />
+                              <Button mnemonicParsing="false" onAction="#approve" prefHeight="60.0" prefWidth="248.0" text="待遇审批" />
+                              <Button mnemonicParsing="false" onAction="#search" prefHeight="60.0" prefWidth="255.0" text="综合查询" />
+                              <Button mnemonicParsing="false" onAction="#publics" prefHeight="60.0" prefWidth="230.0" text="公共业务" />
+                              <Button mnemonicParsing="false" onAction="#info" prefHeight="60.0" prefWidth="249.0" text="信息维护" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="24.0" layoutY="381.0" prefHeight="200.0" prefWidth="195.0" AnchorPane.topAnchor="400.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#refresh" prefHeight="60.0" prefWidth="249.0" text="刷新" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <Button layoutY="747.0" mnemonicParsing="false" onAction="#setting" text="系统设置" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="745.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="248.0" layoutY="75.0" prefHeight="775.0" prefWidth="1083.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <Button layoutY="13.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="1083.0" text="主页" AnchorPane.bottomAnchor="745.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <WebView fx:id="webComponent" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

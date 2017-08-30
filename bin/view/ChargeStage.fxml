@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="850.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ChargeStageController">
+   <children>
+      <AnchorPane prefHeight="120.0" prefWidth="1300.0" style="-fx-background-color: #CAFF70;" AnchorPane.bottomAnchor="775.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane layoutY="75.0" prefHeight="750.0" prefWidth="219.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1081.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <TitledPane layoutX="10.0" layoutY="6.0" prefHeight="200.0" prefWidth="200.0" text="菜单" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <AnchorPane prefHeight="685.0" prefWidth="219.0" style="-fx-background-color: #FFFACD;">
+                     <children>
+                        <VBox layoutX="24.0" layoutY="69.0" prefHeight="320.0" prefWidth="198.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="32.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#charge" prefHeight="60.0" prefWidth="235.0" text="中心报销" />
+                              <Button mnemonicParsing="false" onAction="#approve" prefHeight="60.0" prefWidth="248.0" text="待遇审批" />
+                              <Button mnemonicParsing="false" onAction="#search" prefHeight="60.0" prefWidth="255.0" text="综合查询" />
+                              <Button mnemonicParsing="false" onAction="#publics" prefHeight="60.0" prefWidth="230.0" text="公共业务" />
+                              <Button mnemonicParsing="false" onAction="#info" prefHeight="60.0" prefWidth="249.0" text="信息维护" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="24.0" layoutY="357.0" prefHeight="180.0" prefWidth="131.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="400.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#refresh" prefHeight="60.0" prefWidth="233.0" text="刷新" />
+                              <Button mnemonicParsing="false" onAction="#homepage" prefHeight="60.0" prefWidth="211.0" text="返回主页" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <Button layoutY="747.0" mnemonicParsing="false" onAction="#setting" text="系统设置" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="745.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="246.0" layoutY="75.0" prefHeight="775.0" prefWidth="1083.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <Button layoutY="13.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="1083.0" text="中心报销" AnchorPane.bottomAnchor="745.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane layoutX="8.0" layoutY="30.0" prefHeight="82.0" prefWidth="1083.0" style="-fx-background-color: #D1EEEE;" AnchorPane.leftAnchor="0.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="31.0" text="ID查找" />
+                  <Label layoutX="421.0" layoutY="31.0" text="姓名查找" />
+                  <TextField fx:id="searchID" layoutX="85.0" layoutY="26.0" promptText="请输入人员ID" />
+                  <TextField fx:id="searchName" layoutX="498.0" layoutY="26.0" promptText="请输入人员姓名" />
+                  <Button layoutX="300.0" layoutY="26.0" mnemonicParsing="false" onAction="#searchID" text="搜索" />
+                  <Button layoutX="714.0" layoutY="26.0" mnemonicParsing="false" onAction="#searchName" text="搜索" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="8.0" layoutY="112.0" prefHeight="285.0" prefWidth="1091.0" style="-fx-background-color: #D1EEEE;" AnchorPane.bottomAnchor="368.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="122.0">
+               <children>
+                  <Label fx:id="name" layoutX="109.0" layoutY="40.0" prefHeight="82.0" prefWidth="172.0" text="---">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ID" layoutX="114.0" layoutY="143.0" prefHeight="30.0" prefWidth="163.0" text="---" AnchorPane.leftAnchor="114.0" />
+                  <GridPane layoutX="356.0" layoutY="40.0" prefHeight="212.0" prefWidth="661.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="身份证号码">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="性别" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="出生日期" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="医疗人员类别" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="单位编号" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="单位名称" GridPane.columnIndex="2">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="本年住院次数" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="本年中心报销累计" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label text="本年个人自费累计" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label text="本年医疗费用累计" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="cardCode" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                        <TextArea fx:id="gender" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextArea fx:id="birthday" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextArea fx:id="classofMedicalPerson" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextArea fx:id="companyID" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextArea fx:id="companyName" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" />
+                        <TextArea fx:id="times" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextArea fx:id="center" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <TextArea fx:id="self" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextArea fx:id="total" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="81.0" layoutY="494.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="417.0">
+               <children>
+                  <Button layoutX="651.0" layoutY="81.0" mnemonicParsing="false" onAction="#addInfo" prefHeight="70.0" prefWidth="130.0" text="新建报销信息" />
+                  <Button layoutX="651.0" layoutY="190.0" mnemonicParsing="false" onAction="#deleteInfo" prefHeight="70.0" prefWidth="130.0" text="撤销报销信息" />
+                  <ImageView fitHeight="251.0" fitWidth="279.0" layoutX="101.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Image/logo.jpg" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="deleteNum" layoutX="816.0" layoutY="210.0" promptText="请输入报销编号" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

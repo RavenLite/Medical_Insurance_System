@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="850.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ApproveStageController">
+   <children>
+      <AnchorPane prefHeight="120.0" prefWidth="1300.0" style="-fx-background-color: #CAFF70;" AnchorPane.bottomAnchor="775.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane prefHeight="750.0" prefWidth="219.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1081.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <TitledPane layoutX="10.0" layoutY="6.0" prefHeight="200.0" prefWidth="200.0" text="菜单" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <AnchorPane prefHeight="685.0" prefWidth="219.0" style="-fx-background-color: #FFFACD;">
+                     <children>
+                        <VBox layoutX="24.0" layoutY="44.0" prefHeight="330.0" prefWidth="222.0" AnchorPane.bottomAnchor="352.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="32.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#charge" prefHeight="60.0" prefWidth="222.0" text="中心报销" />
+                              <Button mnemonicParsing="false" onAction="#approve" prefHeight="60.0" prefWidth="248.0" text="待遇审批" />
+                              <Button mnemonicParsing="false" onAction="#search" prefHeight="60.0" prefWidth="255.0" text="综合查询" />
+                              <Button mnemonicParsing="false" onAction="#publics" prefHeight="60.0" prefWidth="230.0" text="公共业务" />
+                              <Button mnemonicParsing="false" onAction="#info" prefHeight="60.0" prefWidth="249.0" text="信息维护" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="36.0" layoutY="424.0" prefHeight="200.0" prefWidth="215.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="400.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#refresh" prefHeight="60.0" prefWidth="233.0" text="刷新" />
+                              <Button mnemonicParsing="false" onAction="#homepage" prefHeight="60.0" prefWidth="231.0" text="返回主页" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <Button layoutY="747.0" mnemonicParsing="false" onAction="#setting" text="系统设置" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="745.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="775.0" prefWidth="1083.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="219.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <AnchorPane layoutX="8.0" layoutY="112.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+               <children>
+                  <Label layoutX="57.0" layoutY="66.0" text="姓名">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="465.0" layoutY="66.0" text="个人ID">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="name" layoutX="146.0" layoutY="68.0" />
+                  <TextField fx:id="ID" layoutX="579.0" layoutY="68.0" />
+                  <GridPane layoutX="57.0" layoutY="286.0" prefHeight="288.0" prefWidth="676.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="审批编号">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="人员ID" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="审批类别" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="开始日期" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="终止日期" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="审批意见" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="审批人" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="审批日期" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="code" GridPane.columnIndex="1" />
+                        <TextField fx:id="personID" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="classof" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="startDate" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="stopDate" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="hospitalID" GridPane.columnIndex="3" />
+                        <TextField fx:id="approveAdvice" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="approvePerson" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <TextField fx:id="approveDate" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextField fx:id="remark" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Label text="审批标志" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label text="定点医疗机构编码" GridPane.columnIndex="2">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <Label layoutX="57.0" layoutY="220.0" text="新增审核信息">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="7.0" layoutY="161.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Button layoutX="863.0" layoutY="466.0" mnemonicParsing="false" onAction="#addApprove" prefHeight="60.0" prefWidth="100.0" text="添加" />
+               </children>
+            </AnchorPane>
+            <Button layoutY="13.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="1083.0" text=" 公共业务" AnchorPane.bottomAnchor="745.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane prefHeight="82.0" prefWidth="1083.0" style="-fx-background-color: #D1EEEE;" AnchorPane.topAnchor="30.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="31.0" text="编码查找" />
+                  <TextField fx:id="searchID" layoutX="85.0" layoutY="26.0" promptText="请输入个人ID" AnchorPane.topAnchor="26.0" />
+                  <Button layoutX="300.0" layoutY="26.0" mnemonicParsing="false" onAction="#searchPerson" text="搜索" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="850.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SearchStageController">
+   <children>
+      <AnchorPane prefHeight="120.0" prefWidth="1300.0" style="-fx-background-color: #CAFF70;" AnchorPane.bottomAnchor="775.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane prefHeight="750.0" prefWidth="219.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1081.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <TitledPane layoutX="10.0" layoutY="6.0" prefHeight="200.0" prefWidth="200.0" text="菜单" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <AnchorPane prefHeight="685.0" prefWidth="219.0" style="-fx-background-color: #FFFACD;">
+                     <children>
+                        <VBox layoutX="24.0" layoutY="44.0" prefHeight="330.0" prefWidth="224.0" AnchorPane.bottomAnchor="352.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="32.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#charge" prefHeight="60.0" prefWidth="235.0" text="中心报销" />
+                              <Button mnemonicParsing="false" onAction="#approve" prefHeight="60.0" prefWidth="248.0" text="待遇审批" />
+                              <Button mnemonicParsing="false" onAction="#search" prefHeight="60.0" prefWidth="255.0" text="综合查询" />
+                              <Button mnemonicParsing="false" onAction="#publics" prefHeight="60.0" prefWidth="230.0" text="公共业务" />
+                              <Button mnemonicParsing="false" onAction="#info" prefHeight="60.0" prefWidth="249.0" text="信息维护" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="24.0" layoutY="381.0" prefHeight="200.0" prefWidth="195.0" AnchorPane.topAnchor="400.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#refresh" prefHeight="60.0" prefWidth="249.0" text="刷新" />
+                              <Button mnemonicParsing="false" onAction="#homepage" prefHeight="60.0" prefWidth="206.0" text="返回主页" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <Button layoutY="747.0" mnemonicParsing="false" onAction="#setting" text="系统设置" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="745.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="775.0" prefWidth="1083.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <AnchorPane layoutX="64.0" layoutY="120.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="17.0" prefWidth="1083.0" text="综合查询" AnchorPane.bottomAnchor="745.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: D1EEEE;" AnchorPane.bottomAnchor="654.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                     <children>
+                        <Label layoutX="23.0" layoutY="41.0" text="ID查找" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="41.0" />
+                        <Label layoutX="408.0" layoutY="41.0" text="人名查找" />
+                        <TextField fx:id="searchID" layoutX="80.0" layoutY="36.0" promptText="请输入人员ID" />
+                        <TextField layoutX="479.0" layoutY="36.0" promptText="请输入人员姓名" />
+                        <Button layoutX="295.0" layoutY="36.0" mnemonicParsing="false" onAction="#searchID" text="搜索" />
+                        <Button layoutX="693.0" layoutY="36.0" mnemonicParsing="false" text="搜索" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="14.0" layoutY="173.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="130.0">
+                     <children>
+                        <TableView fx:id="searchInfo" prefHeight="623.0" prefWidth="1058.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="IDs" prefWidth="120.0" text="个人ID" />
+                            <TableColumn fx:id="names" prefWidth="120.0" text="姓名" />
+                              <TableColumn fx:id="companyIDs" prefWidth="120.0" text="单位编号" />
+                              <TableColumn fx:id="birthdays" prefWidth="120.0" text="出生日期" />
+                              <TableColumn fx:id="inCodes" prefWidth="120.0" text="住院号" />
+                              <TableColumn fx:id="inDates" prefWidth="120.0" text="入院日期" />
+                              <TableColumn fx:id="outDates" prefWidth="120.0" text="出院日期" />
+                              <TableColumn fx:id="diseases" prefWidth="160.0" text="入院诊断疾病名称" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

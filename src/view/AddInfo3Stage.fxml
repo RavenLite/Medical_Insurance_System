@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AddInfo3StageController">
+   <children>
+      <Button layoutX="42.0" layoutY="-1.0" mnemonicParsing="false" text="预结算" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <TableView fx:id="itemInfo" layoutX="75.0" layoutY="97.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+        <columns>
+          <TableColumn fx:id="itemID" prefWidth="250.0" text="项目编码" />
+          <TableColumn fx:id="itemName" prefWidth="250.0" text="项目名称" />
+            <TableColumn fx:id="itemPrice" prefWidth="250.0" text="单价" />
+            <TableColumn fx:id="itemNum" prefWidth="250.0" text="数量" />
+        </columns>
+      </TableView>
+      <Label layoutX="127.0" layoutY="669.0" text="总计">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="money" layoutX="222.0" layoutY="674.0" />
+      <Button layoutX="671.0" layoutY="674.0" mnemonicParsing="false" onAction="#calculate" prefHeight="50.0" prefWidth="80.0" text="结算" />
+      <Button layoutX="803.0" layoutY="674.0" mnemonicParsing="false" onAction="#exit" prefHeight="50.0" prefWidth="80.0" text="退出" />
+   </children>
+</AnchorPane>

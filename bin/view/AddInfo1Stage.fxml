@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AddInfo1StageController">
+   <children>
+      <Button layoutX="214.0" layoutY="14.0" mnemonicParsing="false" text="添加就诊信息" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <GridPane layoutX="108.0" layoutY="177.0" AnchorPane.bottomAnchor="108.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="住院号（门诊号）">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="定点医疗机构编号" GridPane.rowIndex="1">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="医疗类别" GridPane.rowIndex="2">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="入院日期" GridPane.rowIndex="3">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="出院日期" GridPane.rowIndex="4">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="病种编码" GridPane.columnIndex="2">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="医院等级" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="入院诊断疾病编码" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="入院诊断疾病名称" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="出院原因" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="hospitalizationID" GridPane.columnIndex="1" />
+            <TextField fx:id="hospitalID" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="classofTreatment" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="dateofEnterHospital" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="dateofLeaveHospital" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="diseaseID" GridPane.columnIndex="3" />
+            <TextField fx:id="hospitalLevel" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="enterDiseaseID" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="enterDiseaseName" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextField fx:id="reasonLeavingHospital" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label text="人员ID" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="IDs" text="xxx" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label text="人员姓名" GridPane.rowIndex="5">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="names" text="xxx" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="25.0" />
+               </font></Label>
+         </children>
+      </GridPane>
+      <Button layoutX="446.0" layoutY="667.0" mnemonicParsing="false" onAction="#next" prefHeight="43.0" prefWidth="73.0" text="下一步" AnchorPane.leftAnchor="464.0" AnchorPane.topAnchor="715.0" />
+   </children>
+</AnchorPane>

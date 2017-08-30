@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AddServiceStageController">
+   <children>
+      <Button layoutX="10.0" layoutY="9.0" mnemonicParsing="false" text="添加服务设施" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <GridPane layoutX="103.0" layoutY="156.0" prefHeight="442.0" prefWidth="500.0" AnchorPane.bottomAnchor="108.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="医疗服务设施编码">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="服务设施名称" GridPane.rowIndex="1">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ID" GridPane.columnIndex="1" />
+            <TextField fx:id="name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="收费类别" GridPane.rowIndex="2">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="备注" GridPane.columnIndex="2">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label text="限制使用范围" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="remark" GridPane.columnIndex="3" />
+            <TextField fx:id="restrictedScope" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="chargeClass" prefHeight="30.0" prefWidth="287.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button layoutX="484.0" layoutY="735.0" mnemonicParsing="false" onAction="#saveService" prefHeight="43.0" prefWidth="73.0" text="保存" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="484.0" AnchorPane.rightAnchor="443.0" AnchorPane.topAnchor="735.0" />
+   </children>
+</AnchorPane>

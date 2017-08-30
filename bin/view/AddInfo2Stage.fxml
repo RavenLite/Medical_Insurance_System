@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AddInfo2StageController">
+   <children>
+      <Button layoutX="224.0" layoutY="24.0" mnemonicParsing="false" text="添加处方信息" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane layoutX="80.0" layoutY="94.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <TabPane layoutX="150.0" layoutY="36.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="检索录入">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="540.0" layoutY="419.0" prefHeight="175.0" prefWidth="400.0" AnchorPane.leftAnchor="540.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="419.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="项目编号">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="项目名称" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="单价" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="数量" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="itemID" text="xxx" GridPane.columnIndex="1" />
+                                    <Label fx:id="itemName" text="xxx" GridPane.columnIndex="3" />
+                                    <TextField fx:id="price1" promptText="请填写单价" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="num1" promptText="请填写数量" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <Label layoutX="664.0" layoutY="386.0" text="项目基本信息">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="627.0" layoutY="606.0" mnemonicParsing="false" onAction="#addItem1" prefHeight="50.0" prefWidth="80.0" text="添加" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="325.0" />
+                              <Label layoutX="714.0" layoutY="203.0" text="检索">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="600.0" layoutY="272.0" promptText="请输入项目编号或名称" />
+                              <Button layoutX="814.0" layoutY="606.0" mnemonicParsing="false" onAction="#preCalculate" prefHeight="50.0" prefWidth="80.0" text="预结算" AnchorPane.bottomAnchor="75.0" AnchorPane.rightAnchor="106.0" />
+                              <GridPane layoutX="618.0" layoutY="31.0" prefHeight="91.0" prefWidth="243.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="人员姓名">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="人员ID" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="ID1" text="xxx" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="name1" text="xxx" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <Button layoutX="869.0" layoutY="272.0" mnemonicParsing="false" text="检索" />
+                              <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="0.0">
+                                <tabs>
+                                  <Tab text="药品">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="medicineInfo" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="medicineID" prefWidth="250.0" text="药品编号" />
+                                                    <TableColumn fx:id="medicineName" prefWidth="250.0" text="药品名称" />
+                                                  </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab text="诊疗项目">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="treatmentInfo" layoutX="50.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="treatmentID" prefWidth="250.0" text="诊疗项目编号" />
+                                                    <TableColumn fx:id="treatmentName" prefWidth="250.0" text="诊疗项目名称" />
+                                                  </columns>
+                                                </TableView>
+                                             </children></AnchorPane>
+                                    </content>
+                                  </Tab>
+                                    <Tab text="服务设施">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="serviceInfo" layoutX="84.0" layoutY="37.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="serviceID" prefWidth="250.0" text="服务设施编号" />
+                                                    <TableColumn fx:id="serviceName" prefWidth="250.0" text="服务设施名称" />
+                                                  </columns>
+                                                </TableView>
+                                             </children></AnchorPane>
+                                      </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                              <Separator layoutX="618.0" layoutY="330.0" prefWidth="200.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="340.0" />
+                              <Separator layoutX="575.0" layoutY="167.0" prefWidth="200.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="直接录入">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="547.0" layoutY="211.0" prefHeight="230.0" prefWidth="400.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="项目编号">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="项目名称" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="单价" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="数量" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" />
+                                    <Label GridPane.columnIndex="3" />
+                                    <TextField fx:id="itemPrice2" promptText="请填写单价" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="itemNum2" promptText="请填写数量" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <TextField fx:id="itemID2" promptText="请填写编号" GridPane.columnIndex="1" />
+                                    <TextField fx:id="itemName2" promptText="请填写名称" GridPane.columnIndex="3" />
+                                 </children>
+                              </GridPane>
+                              <TableView layoutX="74.0" layoutY="91.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn prefWidth="250.0" text="项目编号" />
+                                  <TableColumn prefWidth="250.0" text="项目名称" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="672.0" layoutY="117.0" text="项目基本信息">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="708.0" layoutY="519.0" mnemonicParsing="false" onAction="#addItem2" prefHeight="48.0" prefWidth="79.0" text="添加" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="600.0" />
+                              <Button layoutX="851.0" layoutY="528.0" mnemonicParsing="false" onAction="#preCalculate" prefHeight="50.0" prefWidth="80.0" text="预结算" AnchorPane.bottomAnchor="75.0" AnchorPane.rightAnchor="100.0" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
